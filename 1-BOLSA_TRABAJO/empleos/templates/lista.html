@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa de Trabajo</title>
+    <style>
+         body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+         .empleo {
+            background: #111;
+            border: 1px solid #444;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .empleo h2 {
+            margin: 0;
+            color: #0f9;
+        }
+        .empleo p {
+            margin: 5px 0;
+        }
+         .empresa {
+            font-weight: bold;
+            color: #09f;
+        }
+         
+    </style>    
+</head>
+<body>
+    <h1>Anuncios de Trabajo</h1>
+    {% for empleo in empleos %}
+    <div class="empleo">
+        <h2>{{empleo.titulo}}</h2>
+        <p class="empresa">{{empleo.empresa}}</p>
+        <p>{{empleo.descripcion}}</p>
+        <p>{{empleo.ubicacion}}</p>
+        <p>{{empleo.salario}}</p>
+        <p><small>Publicado el: {{ empleo.fecha_publicacion|date:"d/m/Y H:i" }}</small></p>
+
+    </div>    
+    {% endfor %}    
+    
+</body>
+</html>

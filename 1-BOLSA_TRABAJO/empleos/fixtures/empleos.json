@@ -1,0 +1,35 @@
+[
+  {
+    "model": "empleos.empleo",
+    "pk": 1,
+    "fields": {
+      "titulo": "Desarrollador Python",
+      "empresa": "Tech Solutions",
+      "descripcion": "Se busca programador Python con experiencia en Django.",
+      "ubicacion": "Remoto",
+      "salario": "3500.00"
+    }
+  },
+  {
+    "model": "empleos.empleo",
+    "pk": 2,
+    "fields": {
+      "titulo": "Diseñador UX/UI",
+      "empresa": "Creative Studio",
+      "descripcion": "Diseñar interfaces modernas y amigables para aplicaciones web.",
+      "ubicacion": "Lima, Perú",
+      "salario": "2500.00"
+    }
+  },
+  {
+    "model": "empleos.empleo",
+    "pk": 3,
+    "fields": {
+      "titulo": "Administrador de Base de Datos",
+      "empresa": "DataCorp",
+      "descripcion": "Gestión de bases de datos Oracle y SQL Server.",
+      "ubicacion": "Bogotá, Colombia",
+      "salario": "4000.00"
+    }
+  }
+]
