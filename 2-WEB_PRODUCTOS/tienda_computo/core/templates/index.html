@@ -1,11 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IKPRODUCTS</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"
 </head>
 <body>
-    <h1>Tienda de Productos Computo</h1>
+    <header>Catalogo de Automoviles</header>
+
+    <main class="contenedor-productos">
+        {% for producto in productos %}
+          <div class="tarjeta">
+              {% if producto.imagen %}
+                 <img src="{{producto.imagen.url}}">
+              {% else %}   
+                  <img src="{% static 'img/sinimagen.jpeg' %}">
+              {% endif %}  
+              <div class="contenido"> 
+                <h2>{{producto.nombre}} </h2>
+                <p class="descripcion">{{producto.descripcion}} </p>
+                <p class="precio">{{producto.precio}} </p>
+              </div>  
+          </div>  
+        {% endfor %}
+    </main>    
 </body>
 </html>
