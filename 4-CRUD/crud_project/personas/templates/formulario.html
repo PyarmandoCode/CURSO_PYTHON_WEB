@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario persona</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        form { width: 300px; margin: auto; display: flex; flex-direction: column; gap: 10px; }
+        input { padding: 8px; }
+        button { padding: 8px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; }
+    </style>    
+</head>
+<body>
+    <h2>Formulario de Persona</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>    
+</body>
+</html>

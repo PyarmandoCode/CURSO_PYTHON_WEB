@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Personas</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        table { border-collapse: collapse; width: 60%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #4CAF50; color: white; }
+        a { text-decoration: none; color: #2196F3; }
+        a.btn { padding: 6px 12px; background: #4CAF50; color: white; border-radius: 5px; }
+    </style>    
+</head>
+<body>
+    <h1>Listar Personas</h1>
+       <a  class="btn" href="{% url 'crear_personas' %}">Agregar Persona</a>
+        <table>
+              <tr>
+                 <th>ID</th><th>Nombre</th><th>Apellido</th><th>Edad</th><th>Acciones</th>
+              </tr>
+               {% for persona in personas %}
+                  <td>{{persona.id}}</td>
+                  <td>{{persona.nombre}}</td>
+                  <td>{{persona.apellido}}</td>
+                  <td>{{persona.edad}}</td>
+                  <td>
+                    <a href="">Editar</a> | <a href="">Eliminar</a>
+                    </td>
+              <tr>
+                {% endfor %}
+              </table>       
+              
+</body>
+</html>
