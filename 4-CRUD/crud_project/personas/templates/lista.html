@@ -26,7 +26,7 @@
                   <td>{{persona.apellido}}</td>
                   <td>{{persona.edad}}</td>
                   <td>
-                    <a href="">Editar</a> | <a href="">Eliminar</a>
+                    <a href="{% url 'editar_persona' persona.id %}">Editar</a> | <a href="{% url 'eliminar_persona' persona.id %}">Eliminar</a>
                     </td>
               <tr>
                 {% endfor %}

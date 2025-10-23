@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Persona</title>
+</head>
+<body>
+    <h2>¿Seguro que desea eliminar a {{persona.nombre}} {{persona.apellido}} ?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">SI,eliminar</button>
+    </form>   
+    <a href="{% url 'listar_personas' %}">Cancelar</a>
+</body>
+</html>
